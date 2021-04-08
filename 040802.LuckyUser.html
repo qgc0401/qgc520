@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			
+			<input type="button" @click="num=Math.round(Math.random()*4)+1" />
+			
+			<div v-for=" person in people"><!--for循环-->
+					<div v-if="num==person.code">
+						幸运观众为：{{person.name}}
+					</div>
+				
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			let v = new Vue({
+				el:'#app',
+				data:{
+					num:'',
+					
+					people:[
+						{name:'张三',code:'1'},
+						{name:'李四',code:'2'},
+						{name:'王五',code:'3'},
+						{name:'赵六',code:'4'},
+						{name:'路人甲',code:'5'},
+					]
+				}
+			})
+			
+		</script>
+		
+	</body>
+</html>
+
+	</body>
+</html>
