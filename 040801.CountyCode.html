@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<p5>提示：有数据为86、39、98、218、977</p5><br>
+			<input type="text" v-model="Number" />
+			
+			<div v-for=" country in countries"><!--for循环-->
+					<div v-if="Number==country.code">
+						国家：{{country.name}}<br>
+						首都：{{country.capital}}<br>
+						国家代码：{{country.code}}
+					</div>
+				
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			let v = new Vue({
+				el:'#app',
+				data:{
+					Number:'',
+					countries:[
+						{name:'中国',capital:'北京',code:'86'},
+						{name:'意大利',capital:'罗马',code:'39'},
+						{name:'伊朗',capital:'德黑兰',code:'98'},
+						{name:'利比亚',capital:'的黎波里',code:'218'},
+						{name:'尼泊尔',capital:'加德满都',code:'977'}
+					]
+				}
+			})
+			
+		</script>
+		
+	</body>
+</html>
